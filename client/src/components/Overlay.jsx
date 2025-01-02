@@ -1,7 +1,6 @@
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
 import {Scroll} from "@react-three/drei";
 import vidosOne from "../../public/assets/videos/rack1.webm";
-import vidosTwo from "../../public/assets/videos/rack2.webm";
 import "./Overlay.css"
 
 const Overlay = () => {
