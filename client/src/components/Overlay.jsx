@@ -1,6 +1,6 @@
 import React, {useEffect, useLayoutEffect, useRef} from 'react';
 import {Scroll} from "@react-three/drei";
-import vidosOne from "../../public/assets/videos/rack1.webm";
+// import vidosOne from "../../public/assets/videos/rack1.webm";
 import "./Overlay.css"
 
 const Overlay = () => {
@@ -10,9 +10,9 @@ const Overlay = () => {
             <Scroll html>
                 <div>
                     <div className="h-screen border-2 border-black">
-                        <video className="absolute" autoPlay muted playsInline={true} key={vidosOne}>
-                            <source src={vidosOne}/>
-                        </video>
+                        {/*<video className="absolute" autoPlay muted playsInline={true} key={vidosOne}>*/}
+                        {/*    <source src={vidosOne}/>*/}
+                        {/*</video>*/}
                         <h2 className=" absolute mt-12 text-center text-[10vw]  text-white font-extrabold">HELLO22</h2>
                     </div>
                     <div className="h-screen border-2 border-black">
