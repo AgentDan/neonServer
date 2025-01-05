@@ -42,11 +42,11 @@ const Four = () => {
             .to(tableRef.current.children[0].material, {opacity: 0}, 0)
             .to(tableRef.current.children[3].material, {opacity: 0}, 0)
             .to(tableRef.current.children[4].material, {opacity: 0}, 0)
-            .to(deskNeonRef.current.children[0].material, {opacity: 0.2}, 0)
-            .to(legneonRef.current.children[0].material, {opacity: 0.2}, 0)
             .to(windowRef.current.children[0].material, {opacity: 0}, 0)
             .to(windowRef.current.children[0].material, {visible: 0}, 0)
 
+            .to(legneonRef.current.children[0].material, {opacity: 1}, 1)
+            .to(deskNeonRef.current.children[0].material, {opacity: 1}, 1)
             .to(legneonRef.current.children[0].material, {visible: 1}, 1.5)
             .to(deskNeonRef.current.children[0].material, {visible: 1}, 1.5)
 
@@ -56,6 +56,7 @@ const Four = () => {
 
             .to(deskNeonRef.current.children[0].material, {visible: 0}, 10.5)
 
+            .to(legneonRef.current.children[0].material, {opacity: 0}, 12)
             .to(windowRef.current.children[0].material, {opacity: 1}, 12)
             .to(windowRef.current.children[0].material, {visible: 1}, 12)
             .to(cameraRef.current.position, {x: 4, y: 3.2, z: 0}, 12)
@@ -76,7 +77,6 @@ const Four = () => {
 
             .to(sceneRef.current.position, {x: -4, y: -2, z: 0.5}, 20)
             .to(sceneRef.current.rotation, {y: -Math.PI / 6}, 20)
-
 
         return () => {
             tl.current?.kill(); // Уничтожаем таймлайн при размонтировании
@@ -152,15 +152,6 @@ const Four = () => {
                         />
                     </mesh>
                 </group>
-
-                {/*<group ref={tableFonRef} visible={false}>*/}
-                {/*    <mesh*/}
-                {/*        geometry={nodes.deskFon.geometry}*/}
-                {/*        material={materials.deskFon}*/}
-                {/*        scale={[0.3, 0.3, 0.3]}*/}
-                {/*    >*/}
-                {/*    </mesh>*/}
-                {/*</group>*/}
 
                 <group ref={tableRef}>
                     <mesh
@@ -240,7 +231,7 @@ const Four = () => {
                         scale={[0.3, 0.3, 0.3]}
                     >
                         <meshStandardMaterial
-                            opacity={0.5}
+                            opacity={1}
                             transparent={true}
                             color="aqua"
                             emissive="aqua"
